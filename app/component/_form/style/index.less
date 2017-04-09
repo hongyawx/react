@@ -1,0 +1,20 @@
+@form-prefix-cls: ~"@{ant-prefix}-form";
+
+body{
+    .@{form-prefix-cls}-item{
+        label {
+            margin-right: 14px;
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .@{form-prefix-cls}-inline {
+        .@{form-prefix-cls}-item {
+            margin-right: 14px;
+        }
+    }
+    .@{ant-prefix}-select-arrow{
+        color: @input-ico-color;
+    }
+}

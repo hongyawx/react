@@ -1,0 +1,39 @@
+// 边栏宽度
+@sider-width: 200px;
+@header-height: 60px;
+
+#app{
+    height: 100%;
+}
+.@{app-prefix}-layout{
+    height: 100%;
+    &-header{
+        position: absolute;
+        width: 100%;
+        height: @header-height;
+        line-height: @header-height;
+        background: #ddd;
+        text-align: center;
+    }
+    &-main {
+        height: 100%;
+        padding-top: @header-height;
+    }
+    &-sider {
+        float: left;
+        width: @sider-width;
+        height: 100%;
+        background: #fff;
+        &-menu{
+            width: @sider-width;
+            height: 100%;
+        }
+    }
+    &-content {
+        display: table-cell;
+        width: 9999em;
+        *width: auto;
+        padding: 20px;
+    }
+
+}

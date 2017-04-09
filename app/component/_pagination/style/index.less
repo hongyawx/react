@@ -1,0 +1,45 @@
+@pagination-prefix-cls: ~"@{ant-prefix}-pagination";
+@pagination-size: 24px;
+
+body{
+    .@{pagination-prefix-cls}{
+        color: @text-color-style;
+        &-total-text,
+
+        &-prev,
+        &-next,
+        &-jump-prev,
+        &-jump-next,
+
+        &-item
+        {
+            height: @pagination-size;
+            line-height: @pagination-size;
+            a{
+                color: @text-color-style;
+            }
+            &-active a,
+            &-active a:hover{
+                color: #fff;
+            }
+        }
+    
+        &-prev,
+        &-next,
+        &-jump-prev,
+        &-jump-next,
+        &-item{
+            min-width: @pagination-size;
+        }
+    
+        &-prev,
+        &-next{
+            a{
+                &:after{
+                    height: @pagination-size;
+                    line-height: @pagination-size;
+                }
+            }
+        }
+    }
+}
